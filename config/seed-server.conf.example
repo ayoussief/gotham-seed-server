@@ -1,0 +1,49 @@
+# Gotham City Seed Server Configuration Example
+#
+# Copy this file to /etc/gotham-seed-server/seed-server.conf
+# and modify the settings as needed.
+
+# Network Configuration
+port=12345
+max_peers=500
+
+# Cleanup and Maintenance
+cleanup_interval_seconds=180
+rate_limit_per_minute=60
+
+# Data Directory
+# Default: ~/.gotham-seed (for user installs) or /var/lib/gotham-seed (for system installs)
+data_directory=/var/lib/gotham-seed
+
+# Logging
+verbose=false
+
+# Security Notes:
+# - The seed server should run on a dedicated server with minimal attack surface
+# - Use a firewall to restrict access to only necessary ports
+# - Monitor logs for abuse and adjust rate limiting as needed
+# - Consider running multiple seed servers for redundancy
+# - Regularly update the Tor package for security fixes
+
+# Performance Tuning:
+# - Increase max_peers for high-traffic networks
+# - Decrease cleanup_interval_seconds for faster cleanup of inactive peers
+# - Adjust rate_limit_per_minute based on expected network activity
+# - Monitor system resources and adjust accordingly
+
+# Example configurations for different deployment scenarios:
+
+# Small Network (< 100 nodes):
+# max_peers=100
+# cleanup_interval_seconds=300
+# rate_limit_per_minute=30
+
+# Medium Network (100-1000 nodes):
+# max_peers=500
+# cleanup_interval_seconds=180
+# rate_limit_per_minute=60
+
+# Large Network (> 1000 nodes):
+# max_peers=2000
+# cleanup_interval_seconds=120
+# rate_limit_per_minute=120

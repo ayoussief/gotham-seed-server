@@ -1,0 +1,41 @@
+[Unit]
+Description=Gotham City Seed Server
+Documentation=https://github.com/gotham-city/seed-server
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=gotham-seed
+Group=gotham-seed
+ExecStart=@CMAKE_INSTALL_PREFIX@/bin/gotham-seed-server --data-dir /var/lib/gotham-seed --port 12345
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=gotham-seed-server
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/gotham-seed
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictRealtime=true
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target

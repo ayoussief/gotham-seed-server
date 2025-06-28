@@ -1,0 +1,128 @@
+# Build directories
+build/
+Build/
+BUILD/
+bin/
+obj/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+
+# Compiled Object files
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+gotham-seed-server
+seed-server
+
+# Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Configuration files with sensitive data
+*.conf
+!*.conf.example
+!seed-server.conf.example
+
+# Runtime directories
+/var/
+/tmp/
+/data/
+/run/
+
+# Tor build artifacts
+tor/Makefile
+tor/Makefile.in
+tor/aclocal.m4
+tor/autom4te.cache/
+tor/orconfig.h
+tor/orconfig.log
+tor/micro-revision.i
+tor/config.h
+tor/config.log
+tor/config.status
+tor/configure
+tor/libtool
+tor/src/config/
+tor/src/test/
+tor/src/app/tor
+tor/src/tools/
+
+# Tor runtime files
+hidden_service/
+torrc
+tor_data/
+*.pid
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test files
+test_output/
+test_results/
+
+# Package files
+*.tar.gz
+*.tgz
+*.zip
+*.deb
+*.rpm
+
+# Core dumps
+core
+core.*
+
+# Valgrind output
+*.valgrind
+valgrind.log
+
+# Coverage files
+*.gcda
+*.gcno
+*.gcov
