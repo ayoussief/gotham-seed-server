@@ -14,7 +14,12 @@ install_manifest.txt
 
 # Compiled Object files
 *.o
-*.obj
+*.objIf You Want .onion Server Without a Card
+
+➡ Host it on your phone with Termux + Tor + C++ server
+
+    Install Termux from F-Droid
+
 *.lo
 *.la
 *.a
@@ -69,29 +74,29 @@ logs/
 /data/
 /run/
 
-# Tor build artifacts
-tor/Makefile
-tor/Makefile.in
-tor/aclocal.m4
-tor/autom4te.cache/
-tor/orconfig.h
-tor/orconfig.log
-tor/micro-revision.i
-tor/config.h
-tor/config.log
-tor/config.status
-tor/configure
-tor/libtool
-tor/src/config/
-tor/src/test/
-tor/src/app/tor
-tor/src/tools/
+# # Tor build artifacts
+# tor/Makefile
+# tor/Makefile.in
+# tor/aclocal.m4
+# tor/autom4te.cache/
+# tor/orconfig.h
+# tor/orconfig.log
+# tor/micro-revision.i
+# tor/config.h
+# tor/config.log
+# tor/config.status
+# tor/configure
+# tor/libtool
+# tor/src/config/
+# tor/src/test/
+# tor/src/app/tor
+# tor/src/tools/
 
-# Tor runtime files
-hidden_service/
-torrc
-tor_data/
-*.pid
+# # Tor runtime files
+# hidden_service/
+# torrc
+# tor_data/
+# *.pid
 
 # Backup files
 *.bak
